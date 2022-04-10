@@ -1,0 +1,149 @@
+/* flex box properties */
+.flex {
+    display: flex;
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-direction-row {
+        flex-direction: row;
+    }
+
+    &-direction-row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &-direction-column {
+        flex-direction: column;
+    }
+
+    &-direction-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    &-justify {
+        &-start {
+            justify-content: flex-start;
+        }
+
+        &-end {
+            justify-content: flex-end;
+        }
+
+        &-center {
+            justify-content: center;
+        }
+
+        &-space-between {
+            justify-content: space-between;
+        }
+
+        &-space-around {
+            justify-content: space-around;
+        }
+    }
+
+    &-align {
+        &-start {
+            align-items: flex-start;
+        }
+
+        &-end {
+            align-items: flex-end;
+        }
+
+        &-center {
+            align-items: center;
+        }
+
+        &-space-between {
+            align-items: space-between;
+        }
+
+        &-space-around {
+            align-items: space-around;
+        }
+
+        &-stretch {
+            align-items: stretch;
+        }
+    }
+}
+
+/* flex box properties at breakpoints*/
+@each $bp_key, $bp_val in $breakpoints {
+    @media(breakpoint($bp_key)) {
+        .flex-#{$bp_key} {
+            display: flex;
+
+            &-wrap {
+                flex-wrap: wrap;
+            }
+
+            &-direction-row {
+                flex-direction: row;
+            }
+
+            &-direction-row-reverse {
+                flex-direction: row-reverse;
+            }
+
+            &-direction-column {
+                flex-direction: column;
+            }
+
+            &-direction-column-reverse {
+                flex-direction: column-reverse;
+            }
+
+            &-justify {
+                &-start {
+                    justify-content: flex-start;
+                }
+
+                &-end {
+                    justify-content: flex-end;
+                }
+
+                &-center {
+                    justify-content: center;
+                }
+
+                &-space-between {
+                    justify-content: space-between;
+                }
+
+                &-space-around {
+                    justify-content: space-around;
+                }
+            }
+
+            &-align {
+                &-start {
+                    align-items: flex-start;
+                }
+
+                &-end {
+                    align-items: flex-end;
+                }
+
+                &-center {
+                    align-items: center;
+                }
+
+                &-space-between {
+                    align-items: space-between;
+                }
+
+                &-space-around {
+                    align-items: space-around;
+                }
+
+                &-stretch {
+                    align-items: stretch;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,213 @@
+/* padding */
+@each $key, $value in $spacers {
+    *.m-#{$key} {
+        padding: $value;
+    }
+}
+
+/* padding on y access (top and bottom) */
+@each $key, $value in $spacers {
+    *.m-y-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+}
+
+/* padding on x access (left and right) */
+@each $key, $value in $spacers {
+    *.m-x-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+}
+
+/* padding on top */
+@each $key, $value in $spacers {
+    *.m-t-#{$key} {
+        padding-top: $value;
+    }
+}
+
+/* padding on bottom */
+@each $key, $value in $spacers {
+    *.m-b-#{$key} {
+        padding-bottom: $value;
+    }
+}
+
+/* padding on left */
+@each $key, $value in $spacers {
+    *.m-l-#{$key} {
+        padding-left: $value;
+    }
+}
+
+/* padding on right */
+@each $key, $value in $spacers {
+    *.m-r-#{$key} {
+        padding-right: $value;
+    }
+}
+
+/* padding at breakpoints */
+@each $bp_key, $bp_val in $breakpoints {
+    @media(breakpoint($bp_key)) {
+        /* padding */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-#{$key} {
+                padding: $value;
+            }
+        }
+
+        /* padding on y access (top and bottom) */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-y-#{$key} {
+                padding-top: $value;
+                padding-bottom: $value;
+            }
+        }
+
+        /* padding on x access (left and right) */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-x-#{$key} {
+                padding-left: $value;
+                padding-right: $value;
+            }
+        }
+
+        /* padding on top */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-t-#{$key} {
+                padding-top: $value;
+            }
+        }
+
+        /* padding on bottom */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-b-#{$key} {
+                padding-bottom: $value;
+            }
+        }
+
+        /* padding on left */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-l-#{$key} {
+                padding-left: $value;
+            }
+        }
+
+        /* padding on right */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-r-#{$key} {
+                padding-right: $value;
+            }
+        }
+    }
+}
+
+/* margin */
+@each $key, $value in $spacers {
+    *.m-#{$key} {
+        margin: $value;
+    }
+}
+
+/* margin on y access (top and bottom) */
+@each $key, $value in $spacers {
+    *.m-y-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+}
+
+/* margin on x access (left and right) */
+@each $key, $value in $spacers {
+    *.m-x-#{$key} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+}
+
+/* margin on top */
+@each $key, $value in $spacers {
+    *.m-t-#{$key} {
+        margin-top: $value;
+    }
+}
+
+/* margin on bottom */
+@each $key, $value in $spacers {
+    *.m-b-#{$key} {
+        margin-bottom: $value;
+    }
+}
+
+/* margin on left */
+@each $key, $value in $spacers {
+    *.m-l-#{$key} {
+        margin-left: $value;
+    }
+}
+
+/* margin on right */
+@each $key, $value in $spacers {
+    *.m-r-#{$key} {
+        margin-right: $value;
+    }
+}
+
+/* margin at breakpoints */
+@each $bp_key, $bp_val in $breakpoints {
+    @media(breakpoint($bp_key)) {
+        /* margin */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-#{$key} {
+                margin: $value;
+            }
+        }
+
+        /* margin on y access (top and bottom) */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-y-#{$key} {
+                margin-top: $value;
+                margin-bottom: $value;
+            }
+        }
+
+        /* margin on x access (left and right) */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-x-#{$key} {
+                margin-left: $value;
+                margin-right: $value;
+            }
+        }
+
+        /* margin on top */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-t-#{$key} {
+                margin-top: $value;
+            }
+        }
+
+        /* margin on bottom */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-b-#{$key} {
+                margin-bottom: $value;
+            }
+        }
+
+        /* margin on left */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-l-#{$key} {
+                margin-left: $value;
+            }
+        }
+
+        /* margin on right */
+        @each $key, $value in $spacers {
+            *.m-#{$bp_key}-r-#{$key} {
+                margin-right: $value;
+            }
+        }
+    }
+}

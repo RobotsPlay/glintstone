@@ -1,7 +1,8 @@
 {
   "name": "glintsonte",
   "version": "0.0.1",
-  "main": "dist/gintstone.js",
+  "main": "dist/js/gintstone.js",
+  "style": "dist/css/bootstrap.css",
   "description": "CSS framework for building websites",
   "scripts": {
     "lint": "eslint .",

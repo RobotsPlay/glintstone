@@ -1,0 +1,31 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: rem(16);
+}
+
+/* create text color classes */
+@each $key, $value in $colors {
+    *.is-#{$key} {
+        color: $value;
+    }
+}
+
+/* create background color classes */
+@each $key, $value in $colors {
+    *.bg-#{$key} {
+        background-color: $value;
+    }
+}

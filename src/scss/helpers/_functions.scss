@@ -1,0 +1,23 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return math.div($number, $number * 0 + 1);
+    }
+  
+    @return $number;
+  }
+
+@function rem($size) {
+    @return math.div(strip-unit($size), 16) * 1rem;
+}
+
+@function em($size) {
+  @return math.div(strip-unit($size), 16) * 1em;
+}
+
+@function breakpoint($size) {
+  @return 'min-width: ' + (map-get($breakpoints, $size));
+}
+
+@function lt-breakpoint($size) {
+  @return 'max-width: ' + (map-get($lt-breakpoints, $size));
+}

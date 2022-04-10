@@ -1,0 +1,37 @@
+$colors: (
+    'black': #000,
+    'white': #fff
+);
+
+$breakpoints: (
+    'sm': em(576px),
+    'md': em(768px),
+    'lg': em(1024px),
+    'xl': em(1200px),
+    /* 'xxl': em(1400px) */
+);
+
+$lt-breakpoints: (
+    'lt-sm': map-get($breakpoints, 'sm') - em(1),
+    'lt-md': map-get($breakpoints, 'md') - em(1),
+    'lt-lg': map-get($breakpoints, 'lg') - em(1),
+    'lt-xl': map-get($breakpoints, 'xl') - em(1),
+    'lt-xxl': map-get($breakpoints, 'xxl') - em(1) 
+);
+
+$spacer: rem(24px);
+
+$spacers: (
+    /* '1_8': math.div($spacer, 8), */
+    /* '1_6': math.div($spacer, 6), */
+    '1_4': math.div($spacer, 4),
+    /* '1_3': math.div($spacer, 3), */
+    '1_2': math.div($spacer, 2),
+    /* '2_3': $spacer * .66667, */
+    '3_4': $spacer * .75,
+    '1': $spacer,
+    /* '1-1_4': $spacer * 1.25, */
+    '1-1_2': $spacer * 1.5,
+    '2': $spacer * 2,
+    '4': $spacer * 4
+);
