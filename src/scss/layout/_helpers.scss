@@ -1,0 +1,78 @@
+// z-index
+
+.z-high,
+.z-med,
+.z-low {
+    position: relative;
+    z-index: 5;
+}
+
+.z-med {
+    z-index: 3;
+}
+
+.z-low {
+    z-index: 1;
+}
+
+/* display properties */
+
+/* show at breakpoints */
+@each $key, $value in $breakpoints {
+    *.show-#{$key} {
+        display: none;
+    }
+}
+
+@each $bp_key, $bp_val in $breakpoints {
+    @media(breakpoint($bp_key)) {
+        *.show-#{$bp_key} {
+            display: block;
+        }
+    }
+}
+
+/* show at lt-breakpoints */
+@each $key, $value in $lt-breakpoints {
+    *.show-#{$key} {
+        display: block;
+    }
+}
+
+@each $bp_key, $bp_val in $lt-breakpoints {
+    @media(lt-breakpoint($bp_key)) {
+        *.show-#{$bp_key} {
+            display: none;
+        }
+    }
+}
+
+/* hide at breakpoints */
+@each $key, $value in $breakpoints {
+    *.hide-#{$key} {
+        display: block;
+    }
+}
+
+@each $bp_key, $bp_val in $breakpoints {
+    @media(breakpoint($bp_key)) {
+        *.hide-#{$bp_key} {
+            display: none;
+        }
+    }
+}
+
+/* hide at lt-breakpoints */
+@each $key, $value in $lt-breakpoints {
+    *.hide-#{$key} {
+        display: none;
+    }
+}
+
+@each $bp_key, $bp_val in $lt-breakpoints {
+    @media(lt-breakpoint($bp_key)) {
+        *.hide-#{$bp_key} {
+            display: block;
+        }
+    }
+}

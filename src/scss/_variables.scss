@@ -19,6 +19,7 @@ $lt-breakpoints: (
     'lt-xxl': map-get($breakpoints, 'xxl') - em(1) 
 );
 
+$columns: 12;
 $spacer: rem(24px);
 
 $spacers: (
