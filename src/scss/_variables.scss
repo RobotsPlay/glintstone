@@ -16,7 +16,7 @@ $lt-breakpoints: (
     'lt-md': map-get($breakpoints, 'md') - em(1),
     'lt-lg': map-get($breakpoints, 'lg') - em(1),
     'lt-xl': map-get($breakpoints, 'xl') - em(1),
-    'lt-xxl': map-get($breakpoints, 'xxl') - em(1) 
+    /* 'lt-xxl': map-get($breakpoints, 'xxl') - em(1) */
 );
 
 $columns: 12;

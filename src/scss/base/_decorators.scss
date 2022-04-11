@@ -1,0 +1,98 @@
+/* rounded corners */
+$radii: (
+    '0': 0,
+    '4': 4px,
+    '6': 6px,
+    '10': 10px,
+    '20': 20px,
+    'circle': 50%
+);
+
+@each $key, $value in $radii {
+    *.r-#{$key} {
+        border-radius: $value;
+    }
+
+    *.r-t-#{$key} {
+        border-top-left-radius: $value;
+        border-top-right-radius: $value;
+    }
+
+    *.r-b-#{$key} {
+        border-bottom-left-radius: $value;
+        border-bottom-right-radius: $value;
+    }
+
+    *.r-l-#{$key} {
+        border-top-left-radius: $value;
+        border-bottom-left-radius: $value;
+    }
+
+    *.r-r-#{$key} {
+        border-bottom-right-radius: $value;
+        border-top-right-radius: $value;
+    }
+
+    *.r-tl-#{$key} {
+        border-top-left-radius: $value;
+    }
+
+    *.r-tr-#{$key} {
+        border-top-right-radius: $value;
+    }
+
+    *.r-bl-#{$key} {
+        border-bottom-left-radius: $value;
+    }
+
+    *.r-br-#{$key} {
+        border-bottom-right-radius: $value;
+    }
+}
+
+/* rounded corners at breakpoints */
+@each $bp_key, $bp_val in $breakpoints {
+    @media(breakpoint($bp_key)) {
+        @each $key, $value in $radii {
+            *.r-#{$bp_key}-#{$key} {
+                border-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-t-#{$key} {
+                border-top-left-radius: $value;
+                border-top-right-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-b-#{$key} {
+                border-bottom-left-radius: $value;
+                border-bottom-right-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-l-#{$key} {
+                border-top-left-radius: $value;
+                border-bottom-left-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-r-#{$key} {
+                border-bottom-right-radius: $value;
+                border-top-right-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-tl-#{$key} {
+                border-top-left-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-tr-#{$key} {
+                border-top-right-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-bl-#{$key} {
+                border-bottom-left-radius: $value;
+            }
+        
+            *.r-#{$bp_key}-br-#{$key} {
+                border-bottom-right-radius: $value;
+            }
+        }
+    }
+}
